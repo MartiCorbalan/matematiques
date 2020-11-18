@@ -31,6 +31,7 @@ public class Nivell1 extends AppCompatActivity {
     EditText PosarSumairesta;
 
 
+
     int NumeroSumaGlobal = 0;
     int NumeroSuma2Global = 0;
 
@@ -58,12 +59,16 @@ public class Nivell1 extends AppCompatActivity {
     LottieAnimationView Correcto2;
     LottieAnimationView Incorrecto2;
 
+    int puntuacio;
+    TextView puntuaciooooo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivell1);
         flecha = findViewById(R.id.flecha);
+        puntuaciooooo=findViewById(R.id.puntuacioooo);
+
         NumeroSuma = (TextView)findViewById(R.id.numeroSuma);
         Numero2Suma = (TextView)findViewById(R.id.numeroSuma2);
 
@@ -97,6 +102,7 @@ public class Nivell1 extends AppCompatActivity {
         Numero2Suma.setText(Suma2);
 
 
+
         int min=1;
         int max=99;
 
@@ -118,6 +124,8 @@ public class Nivell1 extends AppCompatActivity {
             }
 
         }
+
+
 
 
 
@@ -145,6 +153,26 @@ public class Nivell1 extends AppCompatActivity {
         NumeroSumaiResta3Global = (int) (Math.random()*100) + 1;
         SumaiResta3 = String.valueOf(NumeroSumaiResta3Global);
         Numero3SumaiResta.setText(SumaiResta3);
+
+        int contadoooooor=0;
+
+        while (contadoooooor !=1){
+         int resultado =  NumeroSumaiRestaGlobal + NumeroSumaiResta2Global;
+         if (NumeroSumaiResta3Global > resultado){
+
+             NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
+             SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
+             NumeroSumaiResta.setText(SumaiResta1);
+
+             NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
+             SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
+             Numero2SumaiResta.setText(SumaiResta2);
+         }else{
+             contadoooooor=1;
+         }
+
+        }
+
 
         corretgir();
 
@@ -189,6 +217,7 @@ public class Nivell1 extends AppCompatActivity {
                 if (resultat.equals(PosarSuma.getText().toString())) {
                     Correcto.setVisibility(View.VISIBLE);
                     Correcto.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto.setVisibility(View.VISIBLE);
                     Incorrecto.playAnimation();
@@ -197,6 +226,7 @@ public class Nivell1 extends AppCompatActivity {
                 if (resultat2.equals(PosarSumairesta.getText().toString())) {
                     Correcto1.setVisibility(View.VISIBLE);
                     Correcto1.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto1.setVisibility(View.VISIBLE);
                     Incorrecto1.playAnimation();
@@ -205,13 +235,19 @@ public class Nivell1 extends AppCompatActivity {
                 if (resultat3.equals(PosarResta.getText().toString())) {
                     Correcto2.setVisibility(View.VISIBLE);
                     Correcto2.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto2.setVisibility(View.VISIBLE);
                     Incorrecto2.playAnimation();
                 }
 
+                corretgir.setVisibility(View.GONE);
+                puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+
             }
         });
+
+
 
 
     }
