@@ -130,12 +130,7 @@ public class Nivell1 extends AppCompatActivity {
 
 
 
-        /*
-        if (NumeroRestaGlobal>NumeroResta2Global || NumeroRestaGlobal>=NumeroResta2Global){
-            NumeroResta2Global = (int) (Math.random()*max) + min;
-            Resta2 = String.valueOf(NumeroResta2Global);
-            Numero2Resta.setText(Resta2);
-        }*/
+
 
 
 
@@ -246,6 +241,7 @@ public class Nivell1 extends AppCompatActivity {
 
             }
         });
+
 
 
 

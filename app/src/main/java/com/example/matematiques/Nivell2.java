@@ -15,6 +15,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 
 public class Nivell2 extends AppCompatActivity {
+
     Button corretgir;
     ImageView flecha;
     TextView NumeroMulti;
@@ -56,6 +57,8 @@ public class Nivell2 extends AppCompatActivity {
     LottieAnimationView Correcto2;
     LottieAnimationView Incorrecto2;
 
+    int puntuacio;
+    TextView puntuaciooooo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,6 +179,7 @@ public class Nivell2 extends AppCompatActivity {
                 if (resultat.equals(PosarMulti.getText().toString())) {
                     Correcto.setVisibility(View.VISIBLE);
                     Correcto.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto.setVisibility(View.VISIBLE);
                     Incorrecto.playAnimation();
@@ -183,6 +187,7 @@ public class Nivell2 extends AppCompatActivity {
                 if (resultat2.equals(PosarDiv.getText().toString())) {
                     Correcto1.setVisibility(View.VISIBLE);
                     Correcto1.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto1.setVisibility(View.VISIBLE);
                     Incorrecto1.playAnimation();
@@ -190,10 +195,14 @@ public class Nivell2 extends AppCompatActivity {
                 if (resultat3.equals(PosarMultiiDiv.getText().toString())) {
                     Correcto2.setVisibility(View.VISIBLE);
                     Correcto2.playAnimation();
+                    puntuacio++;
                 } else {
                     Incorrecto2.setVisibility(View.VISIBLE);
                     Incorrecto2.playAnimation();
                 }
+
+                corretgir.setVisibility(View.GONE);
+                puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
             }
         });
