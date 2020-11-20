@@ -10,10 +10,19 @@ import android.widget.EditText;
 
 public class registrarse extends AppCompatActivity {
 
+    EditText nom;
+    EditText email;
+    EditText contrasenya;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
+
+        nom=(EditText)findViewById(R.id.username);
+        email=findViewById(R.id.email);
+        contrasenya=findViewById(R.id.password);
 
         Button btnlogin = (Button) findViewById(R.id.botonlogin);
         final EditText usuari = (EditText) findViewById(R.id.username);
@@ -33,6 +42,9 @@ public class registrarse extends AppCompatActivity {
 
 
         });
+
+
+
 
 
     }
