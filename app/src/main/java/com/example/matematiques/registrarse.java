@@ -43,13 +43,14 @@ public class registrarse extends AppCompatActivity {
         contrasenya=findViewById(R.id.password);
 
         Button btnlogin =  findViewById(R.id.botonlogin);
-        //final EditText usuari = (EditText) findViewById(R.id.username);
+        final EditText usuari = (EditText) findViewById(R.id.username);
 
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 username = nom.getText().toString();
+
+                username = nom.getText().toString();
                 gmail = email.getText().toString();
                 pwd = contrasenya.getText().toString();
                 Map<String, Object> user = new HashMap<>();
@@ -59,7 +60,7 @@ public class registrarse extends AppCompatActivity {
                 user.put("password", pwd);
 
 // Add a new document with a generated ID
-                db.collection("usuari")
+                db.collection("usuaris")
                         .add(user)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
@@ -76,7 +77,7 @@ public class registrarse extends AppCompatActivity {
 
                 Intent intent = new Intent(registrarse.this, MainActivity.class);
                 Bundle b = new Bundle();
-                b.putString ("usuaris", String.valueOf(nom));
+                b.putString ("usuari", String.valueOf(nom));
                 intent.putExtras(b);
                 startActivity(intent);
 
