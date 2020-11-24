@@ -64,6 +64,7 @@ public class Nivell1 extends AppCompatActivity {
     int puntuacio;
     TextView puntuaciooooo;
 
+    int contadorDeNivells=0;
 
 
     @Override
@@ -112,6 +113,11 @@ public class Nivell1 extends AppCompatActivity {
 
 
         mostrarinfo();
+
+        while (contadorDeNivells !=3){
+
+
+        }
 
         corretgir.setOnClickListener(new View.OnClickListener() {
                     @Override
