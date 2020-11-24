@@ -111,7 +111,7 @@
         tools:ignore="MissingClass,MissingConstraints" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/incorrecto1"
+        android:id="@+id/icorrecto1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:visibility="gone"

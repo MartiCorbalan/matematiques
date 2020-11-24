@@ -2,6 +2,7 @@ package com.example.matematiques;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 
 public class Nivell1 extends AppCompatActivity {
+
     Button corretgir;
     ImageView flecha;
     TextView NumeroSuma;
@@ -62,6 +64,8 @@ public class Nivell1 extends AppCompatActivity {
     int puntuacio;
     TextView puntuaciooooo;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,84 +96,6 @@ public class Nivell1 extends AppCompatActivity {
         Correcto2=(LottieAnimationView)findViewById(R.id.correcto2);
         Incorrecto2=(LottieAnimationView)findViewById(R.id.incorrecto2);
 
-        NumeroSumaGlobal = (int) (Math.random()*100) + 1;
-        Suma1 = String.valueOf(NumeroSumaGlobal);
-        NumeroSuma.setText(Suma1);
-
-
-        NumeroSuma2Global = (int) (Math.random()*100) + 1;
-        Suma2 = String.valueOf(NumeroSuma2Global);
-        Numero2Suma.setText(Suma2);
-
-
-
-        int min=1;
-        int max=99;
-
-        int contador=0;
-
-        while (contador != 1){
-            NumeroRestaGlobal = (int) (Math.random()*max) + min;
-            NumeroResta2Global = (int) (Math.random()*max) + min;
-            if (NumeroRestaGlobal>=NumeroResta2Global){
-
-                Resta2 = String.valueOf(NumeroResta2Global);
-                Numero2Resta.setText(Resta2);
-
-
-                Resta1 = String.valueOf(NumeroRestaGlobal);
-                NumeroResta.setText(Resta1);
-
-                contador=1;
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-        NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
-        SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
-        NumeroSumaiResta.setText(SumaiResta1);
-
-
-        NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
-        SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
-        Numero2SumaiResta.setText(SumaiResta2);
-
-
-        NumeroSumaiResta3Global = (int) (Math.random()*100) + 1;
-        SumaiResta3 = String.valueOf(NumeroSumaiResta3Global);
-        Numero3SumaiResta.setText(SumaiResta3);
-
-        int contadoooooor=0;
-
-        while (contadoooooor !=1){
-         int resultado =  NumeroSumaiRestaGlobal + NumeroSumaiResta2Global;
-         if (NumeroSumaiResta3Global > resultado){
-
-             NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
-             SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
-             NumeroSumaiResta.setText(SumaiResta1);
-
-             NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
-             SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
-             Numero2SumaiResta.setText(SumaiResta2);
-         }else{
-             contadoooooor=1;
-         }
-
-        }
-
-
-        corretgir();
 
         Correcto.pauseAnimation();
         Incorrecto.pauseAnimation();
@@ -185,6 +111,18 @@ public class Nivell1 extends AppCompatActivity {
         Incorrecto2.setVisibility(View.GONE);
 
 
+        mostrarinfo();
+
+        corretgir.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        corretgir();
+
+                    }
+                });
+
+
         flecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -196,8 +134,7 @@ public class Nivell1 extends AppCompatActivity {
 
 
     public void corretgir(){
-        corretgir.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+
 
                 int suma = NumeroSumaGlobal + NumeroSuma2Global;
                 int sumaiResta = NumeroSumaiRestaGlobal + NumeroSumaiResta2Global - NumeroSumaiResta3Global;
@@ -206,7 +143,6 @@ public class Nivell1 extends AppCompatActivity {
                 String resultat = String.valueOf(suma);
                 String resultat2 = String.valueOf(sumaiResta);
                 String resultat3 = String.valueOf(resta);
-
 
 
                 if (resultat.equals(PosarSuma.getText().toString())) {
@@ -239,15 +175,118 @@ public class Nivell1 extends AppCompatActivity {
                 corretgir.setVisibility(View.GONE);
                 puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                desmarcar();
+                mostrarinfo();
+
+
+
+
             }
-        });
+
+        }, 3000);
+
+
+            }
 
 
 
+            public void mostrarinfo(){
+
+                NumeroSumaGlobal = (int) (Math.random()*100) + 1;
+                Suma1 = String.valueOf(NumeroSumaGlobal);
+                NumeroSuma.setText(Suma1);
 
 
-    }
+                NumeroSuma2Global = (int) (Math.random()*100) + 1;
+                Suma2 = String.valueOf(NumeroSuma2Global);
+                Numero2Suma.setText(Suma2);
+
+                int min=1;
+                int max=99;
+
+                int contador=0;
 
 
-}
+                while (contador != 1){
+                    NumeroRestaGlobal = (int) (Math.random()*max) + min;
+                    NumeroResta2Global = (int) (Math.random()*max) + min;
+                    if (NumeroRestaGlobal>=NumeroResta2Global){
+
+                        Resta2 = String.valueOf(NumeroResta2Global);
+                        Numero2Resta.setText(Resta2);
+
+
+                        Resta1 = String.valueOf(NumeroRestaGlobal);
+                        NumeroResta.setText(Resta1);
+
+                        contador=1;
+                    }
+
+                }
+
+                NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
+                SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
+                NumeroSumaiResta.setText(SumaiResta1);
+
+
+                NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
+                SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
+                Numero2SumaiResta.setText(SumaiResta2);
+
+
+                NumeroSumaiResta3Global = (int) (Math.random()*100) + 1;
+                SumaiResta3 = String.valueOf(NumeroSumaiResta3Global);
+                Numero3SumaiResta.setText(SumaiResta3);
+
+                int contadoooooor=0;
+
+                while (contadoooooor !=1){
+                    int resultado =  NumeroSumaiRestaGlobal + NumeroSumaiResta2Global;
+                    if (NumeroSumaiResta3Global > resultado){
+
+                        NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
+                        SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
+                        NumeroSumaiResta.setText(SumaiResta1);
+
+                        NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
+                        SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
+                        Numero2SumaiResta.setText(SumaiResta2);
+                    }else{
+                        contadoooooor=1;
+                    }
+
+                }
+
+
+
+            }
+
+    public void desmarcar(){
+                corretgir.setVisibility(View.VISIBLE);
+                puntuaciooooo.setVisibility(View.GONE);
+
+                PosarSuma.getText().clear();
+                PosarResta.getText().clear();
+                PosarSumairesta.getText().clear();
+
+                Correcto.setVisibility(View.GONE);
+                Incorrecto.setVisibility(View.GONE);
+
+                Correcto1.setVisibility(View.GONE);
+                Incorrecto1.setVisibility(View.GONE);
+
+                Correcto2.setVisibility(View.GONE);
+                Incorrecto2.setVisibility(View.GONE);
+
+            }
+
+
+        }
+
+
 

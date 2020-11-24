@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo1"
+    android:background="#1B9ED1"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnR"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textColor="#FFFFFF"
         android:text="registrar-se"
         android:background="@drawable/bordes"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -47,13 +46,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <Button
         android:id="@+id/buttonComençar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textColor="#FFFFFF"
         android:text="Començar"
         android:background="@drawable/bordes"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -66,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -79,7 +77,6 @@
         android:id="@+id/btnRanking"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textColor="#FFFFFF"
         android:text="ranking"
         android:background="@drawable/bordes"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -99,16 +96,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.98" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingLeft="7dp"
         android:text="MATEMATIKS"
-        android:textColor="#FFFFFF"
         android:textSize="25dp"
+        android:paddingLeft="7dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline35"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -140,13 +137,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <Button
         android:id="@+id/btnRegistrau"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textColor="#FFFFFF"
         android:text="Ja estic registrat"
         android:background="@drawable/bordes"
         app:layout_constraintBottom_toTopOf="@+id/guideline54"

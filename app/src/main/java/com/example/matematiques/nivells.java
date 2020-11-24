@@ -33,6 +33,7 @@ public class nivells extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), Nivell1.class);
+
                 startActivityForResult(intent, 0);
             }
         });
