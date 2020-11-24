@@ -194,7 +194,7 @@ public class Nivell1 extends AppCompatActivity {
         });
     }
 
-
+/*
     public void corretgir(){
         corretgir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -243,11 +243,64 @@ public class Nivell1 extends AppCompatActivity {
         });
 
 
+    }
+*/
+    public void corretgir(){
+        corretgir.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
+                int suma = NumeroSumaGlobal + NumeroSuma2Global;
+                int sumaiResta = NumeroSumaiRestaGlobal + NumeroSumaiResta2Global - NumeroSumaiResta3Global;
+                int resta = NumeroRestaGlobal - NumeroResta2Global;
+
+                String resultat = String.valueOf(suma);
+                String resultat2 = String.valueOf(sumaiResta);
+                String resultat3 = String.valueOf(resta);
+
+
+
+                if (resultat.equals(PosarSuma.getText().toString())) {
+                    Correcto.setVisibility(View.VISIBLE);
+                    Correcto.playAnimation();
+                    puntuacio++;
+                } else {
+                    Incorrecto.setVisibility(View.VISIBLE);
+                    Incorrecto.playAnimation();
+                }
+
+                if (resultat2.equals(PosarSumairesta.getText().toString())) {
+                    Correcto1.setVisibility(View.VISIBLE);
+                    Correcto1.playAnimation();
+                    puntuacio++;
+                } else {
+                    Incorrecto1.setVisibility(View.VISIBLE);
+                    Incorrecto1.playAnimation();
+                }
+
+                if (resultat3.equals(PosarResta.getText().toString())) {
+                    Correcto2.setVisibility(View.VISIBLE);
+                    Correcto2.playAnimation();
+                    puntuacio++;
+                } else {
+                    Incorrecto2.setVisibility(View.VISIBLE);
+                    Incorrecto2.playAnimation();
+                }
+
+                corretgir.setVisibility(View.GONE);
+                puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+
+            }
+        });
 
 
     }
 
 
+
+
+
 }
+
+
+
 
