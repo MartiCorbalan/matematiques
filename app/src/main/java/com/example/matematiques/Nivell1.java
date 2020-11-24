@@ -187,6 +187,9 @@ public class Nivell1 extends AppCompatActivity {
                 desmarcar();
                 mostrarinfo();
 
+                desmarcar();
+                mostrarinfo();
+
 
 
 
