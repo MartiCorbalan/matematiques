@@ -57,7 +57,8 @@ public class Nivell2 extends AppCompatActivity {
     LottieAnimationView Correcto2;
     LottieAnimationView Incorrecto2;
 
-    int puntuacio;
+    int puntuacio=0;
+
     TextView puntuaciooooo;
 
     @Override
@@ -65,6 +66,7 @@ public class Nivell2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivell2);
 
+        puntuaciooooo=findViewById(R.id.puntuacioooo);
         flecha = findViewById(R.id.flecha);
         NumeroMulti = (TextView)findViewById(R.id.numeroMulti);
         NumeroMulti2 = (TextView)findViewById(R.id.numeroMulti2);

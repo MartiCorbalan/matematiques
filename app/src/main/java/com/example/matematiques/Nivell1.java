@@ -64,7 +64,7 @@ public class Nivell1 extends AppCompatActivity {
     int puntuacio;
     TextView puntuaciooooo;
 
-
+    int contadoNivells;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,16 +181,16 @@ public class Nivell1 extends AppCompatActivity {
             @Override
             public void run() {
 
-                desmarcar();
-                mostrarinfo();
+                contadoNivells++;
+                if (contadoNivells == 3){
+
+                    Intent intent = new Intent (Nivell1.this, Nivell2.class);
+                    startActivityForResult(intent, 0);
+                    finish();
+                }
 
                 desmarcar();
                 mostrarinfo();
-
-                desmarcar();
-                mostrarinfo();
-
-
 
 
             }
@@ -198,8 +198,8 @@ public class Nivell1 extends AppCompatActivity {
         }, 3000);
 
 
-            }
 
+    }
 
 
             public void mostrarinfo(){
@@ -224,12 +224,13 @@ public class Nivell1 extends AppCompatActivity {
                     NumeroResta2Global = (int) (Math.random()*max) + min;
                     if (NumeroRestaGlobal>=NumeroResta2Global){
 
+
                         Resta2 = String.valueOf(NumeroResta2Global);
                         Numero2Resta.setText(Resta2);
 
-
                         Resta1 = String.valueOf(NumeroRestaGlobal);
                         NumeroResta.setText(Resta1);
+
 
                         contador=1;
                     }
