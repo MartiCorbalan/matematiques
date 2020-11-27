@@ -177,26 +177,37 @@ public class Nivell1 extends AppCompatActivity {
                 puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
 
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 contadoNivells++;
-                if (contadoNivells == 3){
 
-                    Intent intent = new Intent (Nivell1.this, Nivell2.class);
-                    startActivityForResult(intent, 0);
-                    finish();
+                if (contadoNivells == 3) {
+
+                    //corretgir.setVisibility(View.GONE);
+                    //puntuaciooooo.setVisibility(View.VISIBLE);
+                    //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent (Nivell1.this, Nivell2.class);
+                            startActivityForResult(intent, 0);
+                            finish();
+
+                        }
+                    },6000);
                 }
-
                 desmarcar();
                 mostrarinfo();
-
-
             }
 
         }, 3000);
-
 
 
     }
