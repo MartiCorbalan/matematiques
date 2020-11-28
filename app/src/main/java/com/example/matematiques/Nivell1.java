@@ -63,7 +63,7 @@ public class Nivell1 extends AppCompatActivity {
 
     int puntuacio;
     TextView puntuaciooooo;
-
+    int puntuacioTotal;
     int contadoNivells;
 
     @Override
@@ -117,9 +117,7 @@ public class Nivell1 extends AppCompatActivity {
         corretgir.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         corretgir();
-
                     }
                 });
 
@@ -134,80 +132,85 @@ public class Nivell1 extends AppCompatActivity {
     }
 
 
-    public void corretgir(){
+    public void corretgir() {
+
+        puntuacio=0;
+
+        int suma = NumeroSumaGlobal + NumeroSuma2Global;
+        int sumaiResta = NumeroSumaiRestaGlobal + NumeroSumaiResta2Global - NumeroSumaiResta3Global;
+        int resta = NumeroRestaGlobal - NumeroResta2Global;
+
+        String resultat = String.valueOf(suma);
+        String resultat2 = String.valueOf(sumaiResta);
+        String resultat3 = String.valueOf(resta);
 
 
-                int suma = NumeroSumaGlobal + NumeroSuma2Global;
-                int sumaiResta = NumeroSumaiRestaGlobal + NumeroSumaiResta2Global - NumeroSumaiResta3Global;
-                int resta = NumeroRestaGlobal - NumeroResta2Global;
+        if (resultat.equals(PosarSuma.getText().toString())) {
+            Correcto.setVisibility(View.VISIBLE);
+            Correcto.playAnimation();
+            puntuacio++;
+        } else {
+            Incorrecto.setVisibility(View.VISIBLE);
+            Incorrecto.playAnimation();
+        }
 
-                String resultat = String.valueOf(suma);
-                String resultat2 = String.valueOf(sumaiResta);
-                String resultat3 = String.valueOf(resta);
+        if (resultat2.equals(PosarSumairesta.getText().toString())) {
+            Correcto1.setVisibility(View.VISIBLE);
+            Correcto1.playAnimation();
+            puntuacio++;
+        } else {
+            Incorrecto1.setVisibility(View.VISIBLE);
+            Incorrecto1.playAnimation();
+        }
 
+        if (resultat3.equals(PosarResta.getText().toString())) {
+            Correcto2.setVisibility(View.VISIBLE);
+            Correcto2.playAnimation();
+            puntuacio++;
+        } else {
+            Incorrecto2.setVisibility(View.VISIBLE);
+            Incorrecto2.playAnimation();
+        }
 
-                if (resultat.equals(PosarSuma.getText().toString())) {
-                    Correcto.setVisibility(View.VISIBLE);
-                    Correcto.playAnimation();
-                    puntuacio++;
-                } else {
-                    Incorrecto.setVisibility(View.VISIBLE);
-                    Incorrecto.playAnimation();
-                }
+        puntuacioTotal += puntuacio;
 
-                if (resultat2.equals(PosarSumairesta.getText().toString())) {
-                    Correcto1.setVisibility(View.VISIBLE);
-                    Correcto1.playAnimation();
-                    puntuacio++;
-                } else {
-                    Incorrecto1.setVisibility(View.VISIBLE);
-                    Incorrecto1.playAnimation();
-                }
-
-                if (resultat3.equals(PosarResta.getText().toString())) {
-                    Correcto2.setVisibility(View.VISIBLE);
-                    Correcto2.playAnimation();
-                    puntuacio++;
-                } else {
-                    Incorrecto2.setVisibility(View.VISIBLE);
-                    Incorrecto2.playAnimation();
-                }
-
-                corretgir.setVisibility(View.GONE);
-                puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+        //corretgir.setVisibility(View.GONE);
+        //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
 
 
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                contadoNivells++;
-
-                if (contadoNivells == 3) {
-
-                    //corretgir.setVisibility(View.GONE);
-                    //puntuaciooooo.setVisibility(View.VISIBLE);
-                    //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+                    contadoNivells++;
+                    corretgir.setVisibility(View.GONE);
+                    puntuaciooooo.setVisibility(View.VISIBLE);
+                    puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
-                            Intent intent = new Intent (Nivell1.this, Nivell2.class);
-                            startActivityForResult(intent, 0);
-                            finish();
+                            desmarcar();
+                            mostrarinfo();
+
 
                         }
-                    },6000);
-                }
-                desmarcar();
-                mostrarinfo();
-            }
+                    }, 4000);
 
-        }, 3000);
+        if (contadoNivells == 4){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    Intent intent = new Intent (Nivell1.this, Nivell2.class);
+                    startActivityForResult(intent, 0);
+                    finish();
+                }
+            },2000);
+
+
+        }
+
+
+
 
 
     }
@@ -286,6 +289,7 @@ public class Nivell1 extends AppCompatActivity {
             }
 
     public void desmarcar(){
+
                 corretgir.setVisibility(View.VISIBLE);
                 puntuaciooooo.setVisibility(View.GONE);
 

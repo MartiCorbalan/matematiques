@@ -60,6 +60,8 @@ public class Nivell2 extends AppCompatActivity {
     int puntuacio=0;
 
     TextView puntuaciooooo;
+    int puntuacioTotal;
+    int contadoNivells;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,6 +158,12 @@ public class Nivell2 extends AppCompatActivity {
         Correcto2.setVisibility(View.GONE);
         Incorrecto2.setVisibility(View.GONE);
 
+        corretgir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                corretgir();
+            }
+        });
 
         flecha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,8 +176,8 @@ public class Nivell2 extends AppCompatActivity {
 
 
     public void corretgir(){
-        corretgir.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+      puntuacio=0;
+
                 int multiplicacio = NumeroMultiGlobal * NumeroMultiGlobal2;
                 int multiIDiv = NumeroMultiiDivGlobal * NumeroMultiiDivGlobal2 / NumeroMultiiDivGlobal3;
                 int divisio = NumeroDivGlobal / NumeroDivGlobal2;
@@ -203,13 +211,38 @@ public class Nivell2 extends AppCompatActivity {
                     Incorrecto2.playAnimation();
                 }
 
-                corretgir.setVisibility(View.GONE);
-                puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
+                    puntuacioTotal += puntuacio;
 
-            }
-        });
+                    contadoNivells++;
+                    corretgir.setVisibility(View.GONE);
+                    puntuaciooooo.setVisibility(View.VISIBLE);
+                    puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
+
+
+
+
     }
 
+
+    public void desmarcar(){
+
+        corretgir.setVisibility(View.VISIBLE);
+        puntuaciooooo.setVisibility(View.GONE);
+
+        PosarMulti.getText().clear();
+        PosarDiv.getText().clear();
+        PosarMultiiDiv.getText().clear();
+
+        Correcto.setVisibility(View.GONE);
+        Incorrecto.setVisibility(View.GONE);
+
+        Correcto1.setVisibility(View.GONE);
+        Incorrecto1.setVisibility(View.GONE);
+
+        Correcto2.setVisibility(View.GONE);
+        Incorrecto2.setVisibility(View.GONE);
+
+    }
 
 
 
