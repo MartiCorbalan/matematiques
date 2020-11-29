@@ -27,7 +27,7 @@
         android:id="@+id/PosarMulti"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
         app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline22"
@@ -51,7 +51,7 @@
         android:id="@+id/PosarDiv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline38"
         app:layout_constraintEnd_toStartOf="@+id/guideline37"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
@@ -245,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.62" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -409,7 +409,7 @@
         android:id="@+id/correcto1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/NumeroMultiiDiv2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toTopOf="@+id/guideline38"
@@ -497,11 +497,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
-        android:textSize="24dp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintStart_toStartOf="@+id/guideline20"
-        app:layout_constraintTop_toBottomOf="@+id/incorrecto2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline55" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

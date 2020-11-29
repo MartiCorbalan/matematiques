@@ -210,9 +210,6 @@ public class Nivell1 extends AppCompatActivity {
         }
 
 
-
-
-
     }
 
 
