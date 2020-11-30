@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     String userMain;
+    Boolean registrat = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
         if(bundle !=null)
         {
             userMain = bundle.getString("usuaris");
+
+        }
+
+        if(registrat != true){
+
+            buttonComençar.setVisibility(View.GONE);
+
+        }else{
+
+            buttonComençar.setVisibility(View.VISIBLE);
 
         }
 
