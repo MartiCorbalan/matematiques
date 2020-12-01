@@ -18,7 +18,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
+
+
 public class login extends AppCompatActivity {
+
+ static ArrayList <jugador> arrayJugador = new ArrayList<>();
 
     EditText  email, password;
 
@@ -32,18 +38,12 @@ public class login extends AppCompatActivity {
 
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 login();
-
-
-
-
-
-
-
 
             }
         });
@@ -66,6 +66,8 @@ public class login extends AppCompatActivity {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             Toast.makeText(login.this, "T'has registrat correctament.",
                                     Toast.LENGTH_SHORT).show();
+
+                            arrayJugador.add(new jugador("gmail", 0));
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override

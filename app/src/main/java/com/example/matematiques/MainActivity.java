@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnR = (Button) findViewById(R.id.btnR);
+
         Button buttonComençar = (Button) findViewById(R.id.buttonComençar);
         Button btnRanking = (Button) findViewById(R.id.btnRanking);
-        Button btnRegistrat = (Button) findViewById(R.id.btnRegistrau);
+
 
 
 
@@ -30,23 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if(registrat != true){
 
-            buttonComençar.setVisibility(View.GONE);
 
-        }else{
-
-            buttonComençar.setVisibility(View.VISIBLE);
-
-        }
-
-        btnR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), registrarse.class);
-                startActivityForResult(intent, 0);
-            }
-        });
 
 
         buttonComençar.setOnClickListener(new View.OnClickListener() {
@@ -69,13 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-        btnRegistrat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), login.class);
-                startActivityForResult(intent, 0);
-            }
-        });
+
 
 
     }

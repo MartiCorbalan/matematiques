@@ -201,6 +201,9 @@ public class Nivell1 extends AppCompatActivity {
                 public void run() {
 
                     Intent intent = new Intent (Nivell1.this, Nivell2.class);
+                    Bundle b = new Bundle();
+                    b.putInt ("hola",puntuacioTotal);
+                    intent.putExtras(b);
                     startActivityForResult(intent, 0);
                     finish();
                 }

@@ -66,10 +66,16 @@ public class Nivell2 extends AppCompatActivity {
     int puntuacioTotal;
     int contadorNivells;
 
+    int puntuacioGeneral;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivell2);
+
+        Bundle bundle = getIntent().getExtras();
+        puntuacioGeneral = bundle.getInt("hola");
 
         puntuaciooooo=findViewById(R.id.puntuacioooo);
         flecha = findViewById(R.id.flecha);
@@ -123,7 +129,9 @@ public class Nivell2 extends AppCompatActivity {
         flecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent (v.getContext(), Nivell3.class);
+
                 startActivityForResult(intent, 0);
             }
         });
@@ -176,7 +184,9 @@ public class Nivell2 extends AppCompatActivity {
                     contadorNivells++;
                     corretgir.setVisibility(View.GONE);
                     puntuaciooooo.setVisibility(View.VISIBLE);
-                    puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
+                    int sumapunts = puntuacioGeneral + puntuacioTotal;
+                    //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: " + sumapunts);
+                    puntuaciooooo.setText(sumapunts);
 
 
         new Handler().postDelayed(new Runnable() {
@@ -194,8 +204,12 @@ public class Nivell2 extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-
+                    int aux=puntuacioTotal + puntuacioGeneral;
                     Intent intent = new Intent (Nivell2.this, Nivell3.class);
+                    Bundle b = new Bundle();
+
+                    b.putInt ("hola",aux);
+                    intent.putExtras(b);
                     startActivityForResult(intent, 0);
                     finish();
                 }
@@ -211,7 +225,6 @@ public class Nivell2 extends AppCompatActivity {
        NumeroMultiGlobal = (int) (Math.random()*100) + 1;
        Multi1 = String.valueOf(NumeroMultiGlobal);
        NumeroMulti.setText(Multi1);
-
 
 
        NumeroMultiGlobal2 = (int) (Math.random()*100) + 1;

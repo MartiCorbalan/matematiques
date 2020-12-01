@@ -44,12 +44,15 @@ public class Nivell3 extends AppCompatActivity {
     TextView puntuacioo;
     int puntuacioTotal;
     int contadorNivells;
-
+    int puntuacioGeneral;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivell3);
+
+        Bundle bundle = getIntent().getExtras();
+        puntuacioGeneral = bundle.getInt("hola");
 
         puntuacioo=findViewById(R.id.puntuacio);
 
@@ -121,7 +124,10 @@ public class Nivell3 extends AppCompatActivity {
                 contadorNivells++;
                 corretgir.setVisibility(View.GONE);
                 puntuacioo.setVisibility(View.VISIBLE);
-                puntuacioo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
+
+                int sumarpunts = puntuacioGeneral + puntuacioTotal;
+                //puntuacioo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
+                puntuacioo.setText(sumarpunts);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -135,7 +141,12 @@ public class Nivell3 extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    int aux=puntuacioTotal + puntuacioGeneral;
                     Intent intent = new Intent (Nivell3.this, ranking.class);
+                    Bundle b = new Bundle();
+
+                    b.putInt ("hola",aux);
+                    intent.putExtras(b);
                     startActivityForResult(intent, 0);
                     finish();
                 }

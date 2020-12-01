@@ -7,18 +7,6 @@
     android:background="#1B9ED1"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnR"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="registrar-se"
-        android:background="@drawable/bordes"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -52,12 +40,12 @@
         android:id="@+id/buttonComençar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Començar"
         android:background="@drawable/bordes"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        android:text="Començar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -77,12 +65,12 @@
         android:id="@+id/btnRanking"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="ranking"
         android:background="@drawable/bordes"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        android:text="ranking"
+        app:layout_constraintBottom_toTopOf="@+id/guideline54"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline53" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -138,17 +126,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.58" />
-
-    <Button
-        android:id="@+id/btnRegistrau"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Ja estic registrat"
-        android:background="@drawable/bordes"
-        app:layout_constraintBottom_toTopOf="@+id/guideline54"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline53" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
