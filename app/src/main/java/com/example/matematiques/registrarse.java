@@ -93,27 +93,12 @@ public class registrarse<EmailPasswordActivity> extends AppCompatActivity {
         Map<String, Object> user = new HashMap<>();
         user.put("usuari", nom);
         user.put("email", gmail);
-        user.put("password", pwd);
         user.put("puntuacio", 0);
 
 
 
-// Add a new document with a generated ID
-        db.collection("usuaris")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
 
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
+
 
 
         mAuth.createUserWithEmailAndPassword(gmail, pwd)
@@ -124,6 +109,21 @@ public class registrarse<EmailPasswordActivity> extends AppCompatActivity {
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
 
+                            db.collection("usuaris")
+                                    .add(user)
+                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                        @Override
+                                        public void onSuccess(DocumentReference documentReference) {
+                                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Log.w(TAG, "Error adding document", e);
+                                        }
+                                    });
                            Toast.makeText(registrarse.this, "S'ha registrat el email",Toast.LENGTH_LONG).show();
                         } else {
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());

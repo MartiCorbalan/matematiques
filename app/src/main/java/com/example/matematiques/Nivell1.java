@@ -3,18 +3,32 @@ package com.example.matematiques;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 
 public class Nivell1 extends AppCompatActivity {
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private String email = user.getEmail();
+    private String id = "";
 
     Button corretgir;
     ImageView flecha;
@@ -66,10 +80,19 @@ public class Nivell1 extends AppCompatActivity {
     int puntuacioTotal;
     int contadoNivells;
 
+    int dbpuntuacioTotal;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivell1);
+
+
+        buscarpuntuacio();
+
+
         flecha = findViewById(R.id.flecha);
         puntuaciooooo=findViewById(R.id.puntuacioooo);
 
@@ -111,10 +134,8 @@ public class Nivell1 extends AppCompatActivity {
         Incorrecto2.setVisibility(View.GONE);
 
 
-        mostrarinfo();
-
-
-        corretgir.setOnClickListener(new View.OnClickListener() {
+                mostrarinfo();
+                corretgir.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         corretgir();
@@ -178,18 +199,23 @@ public class Nivell1 extends AppCompatActivity {
         //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
 
-
+        System.out.println(" id " + id);
                     contadoNivells++;
                     corretgir.setVisibility(View.GONE);
                     puntuaciooooo.setVisibility(View.VISIBLE);
                     puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: "+ puntuacioTotal);
+                    actualitzarpuntuacio();
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+
+
+
                             desmarcar();
                             mostrarinfo();
+
 
 
                         }
@@ -201,9 +227,7 @@ public class Nivell1 extends AppCompatActivity {
                 public void run() {
 
                     Intent intent = new Intent (Nivell1.this, Nivell2.class);
-                    Bundle b = new Bundle();
-                    b.putInt ("hola",puntuacioTotal);
-                    intent.putExtras(b);
+
                     startActivityForResult(intent, 0);
                     finish();
                 }
@@ -309,7 +333,52 @@ public class Nivell1 extends AppCompatActivity {
             }
 
 
+        public void buscarpuntuacio(){
+
+            db.collection("usuaris")
+                    .whereEqualTo("email", email)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d("TAG", document.getId() + " => " + document.getData());
+                                    id = document.getId();
+                                    dbpuntuacioTotal = Integer.parseInt(document.getData().get("puntuacio").toString());
+
+                                }
+                            } else {
+                                Log.d("TAG", "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
+
         }
+
+        public void actualitzarpuntuacio(){
+
+        if(puntuacioTotal >= dbpuntuacioTotal){
+
+            db.collection("usuaris").document(id).update("puntuacio", puntuacioTotal);
+
+        }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class login extends AppCompatActivity {
 
- static ArrayList <jugador> arrayJugador = new ArrayList<>();
+
 
     EditText  email, password;
 
@@ -67,7 +67,7 @@ public class login extends AppCompatActivity {
                             Toast.makeText(login.this, "T'has registrat correctament.",
                                     Toast.LENGTH_SHORT).show();
 
-                            arrayJugador.add(new jugador("gmail", 0));
+
 
                             new Handler().postDelayed(new Runnable() {
                                 @Override
