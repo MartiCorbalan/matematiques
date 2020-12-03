@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,7 +38,7 @@ public class paginaInicial<EmailPasswordActivity> extends AppCompatActivity {
 
     String nom, gmail, pwd;
     Button btnlogin;
-    Button btnregistrat;
+    TextView jaregistrat;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private FirebaseAuth mAuth;
@@ -45,11 +46,11 @@ public class paginaInicial<EmailPasswordActivity> extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pagina_inicial);
+        setContentView(R.layout.prova);
         mAuth = FirebaseAuth.getInstance();
 
         btnlogin = (Button) findViewById(R.id.botonlogin);
-        btnregistrat = (Button) findViewById(R.id.jaregistrat);
+        jaregistrat =  findViewById(R.id.jaregistrat);
         username=findViewById(R.id.username);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
@@ -67,7 +68,7 @@ public class paginaInicial<EmailPasswordActivity> extends AppCompatActivity {
 
         });
 
-        btnregistrat.setOnClickListener(new View.OnClickListener() {
+        jaregistrat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), login.class);
