@@ -200,6 +200,7 @@ public class Nivell1 extends AppCompatActivity {
 
 
         System.out.println(" id " + id);
+
                     contadoNivells++;
                     corretgir.setVisibility(View.GONE);
                     puntuaciooooo.setVisibility(View.VISIBLE);

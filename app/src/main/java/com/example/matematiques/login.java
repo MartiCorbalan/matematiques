@@ -33,7 +33,7 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_prova);
         Button btnlogin = (Button) findViewById(R.id.botonlogin);
 
         email=findViewById(R.id.email);
@@ -44,7 +44,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
 
                 login();
-
+                //crear toast per donar benvinguda a l'usuari
             }
         });
 

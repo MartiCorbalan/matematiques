@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:background="#23C1B3"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="212dp">
 
@@ -24,9 +24,9 @@
             android:layout_width="146dp"
             android:layout_height="81dp"
             android:layout_gravity="center"
-            android:background="#0FFFFFFF"
+            android:background="#02000000"
             android:hapticFeedbackEnabled="false"
-            app:srcCompat="@drawable/user2" />
+            app:srcCompat="@drawable/prova2" />
 
         <Space
             android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                 android:id="@+id/jaregistrat"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:text="Ja estic registrat" />
 
         </LinearLayout>

@@ -235,7 +235,7 @@ public class Nivell2 extends AppCompatActivity {
        while (contador != 1){
 
            NumeroDivGlobal = (int) (Math.random()*max) + min;
-           NumeroDivGlobal2 = (int) (Math.random()*max) + min;
+           NumeroDivGlobal2 = (int) (Math.random()*20) + min;
 
 
            if (NumeroDivGlobal>=NumeroDivGlobal2 && NumeroDivGlobal % NumeroDivGlobal2 == 0){
@@ -251,7 +251,7 @@ public class Nivell2 extends AppCompatActivity {
            }
 
        }
-
+/*
        NumeroMultiiDivGlobal = (int) (Math.random()*10) + 1;
        MultiIDiv = String.valueOf(NumeroMultiiDivGlobal);
        NumeroMultiiDiv.setText(MultiIDiv);
@@ -263,15 +263,27 @@ public class Nivell2 extends AppCompatActivity {
        NumeroMultiiDivGlobal3 = (int) (Math.random()*10) + 1;
        MultiIDiv3 = String.valueOf(NumeroMultiiDivGlobal3);
        NumeroMultiiDiv3.setText(MultiIDiv3);
-
+*/
 
        int contadooor =0;
 
        while (contadooor != 1){
 
-           NumeroMultiiDivGlobal = (int) (Math.random()*max) + min;
-           NumeroMultiiDivGlobal2 = (int) (Math.random()*max) + min;
-           NumeroMultiiDivGlobal3 = (int) (Math.random()*max) + min;
+           NumeroMultiiDivGlobal = (int) (Math.random()*20) + 1;
+           MultiIDiv = String.valueOf(NumeroMultiiDivGlobal);
+           NumeroMultiiDiv.setText(MultiIDiv);
+
+           NumeroMultiiDivGlobal2 = (int) (Math.random()*20) + 1;
+           MultiIDiv2 = String.valueOf(NumeroMultiiDivGlobal2);
+           NumeroMultiiDiv2.setText(MultiIDiv2);
+
+           NumeroMultiiDivGlobal3 = (int) (Math.random()*20) + 1;
+           MultiIDiv3 = String.valueOf(NumeroMultiiDivGlobal3);
+           NumeroMultiiDiv3.setText(MultiIDiv3);
+/*
+           NumeroMultiiDivGlobal = (int) (Math.random()*20) + min;
+           NumeroMultiiDivGlobal2 = (int) (Math.random()*20) + min;
+           NumeroMultiiDivGlobal3 = (int) (Math.random()*20) + min;*/
 
        int divisible =  NumeroMultiiDivGlobal * NumeroMultiiDivGlobal2;
 

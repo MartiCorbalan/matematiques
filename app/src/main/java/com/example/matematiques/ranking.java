@@ -18,7 +18,7 @@ public class ranking extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
-        jugador1 = findViewById(R.id.j1);
+        //jugador1 = findViewById(R.id.j1);
 
 
 
