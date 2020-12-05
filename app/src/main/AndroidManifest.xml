@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".carga"></activity>
         <activity android:name=".paginaInicial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +24,13 @@
         <activity android:name=".ranking" />
         <activity android:name=".registrarse" />
         <activity android:name=".Nivell1" />
-
         <activity
             android:name=".MainActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"></activity>
 
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

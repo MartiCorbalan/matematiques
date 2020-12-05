@@ -376,7 +376,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.17" />
-
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/carga"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#A8A4A4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/avion" />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/correcto"
         android:layout_width="0dp"
@@ -466,17 +477,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.66" />
 
-    <ImageView
-        android:id="@+id/flecha"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/guideline56"
-        app:layout_constraintEnd_toStartOf="@+id/guideline57"
-        app:layout_constraintStart_toStartOf="@+id/guideline37"
-        app:layout_constraintTop_toTopOf="@+id/guideline28"
-        app:srcCompat="@drawable/flecha"
-        tools:ignore="VectorDrawableCompat" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline56"

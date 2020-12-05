@@ -14,6 +14,12 @@ public class ranking extends AppCompatActivity {
 
     TextView jugador1;
 
+    ArrayList<String> jugador = new ArrayList<>();
+
+
+
+    ArrayList<Integer> puntuacio = new ArrayList<Integer>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +27,14 @@ public class ranking extends AppCompatActivity {
         //jugador1 = findViewById(R.id.j1);
 
 
-
     }
 
 
+    public void buscarJugador(){
+
+
+
+    }
 
 
 }

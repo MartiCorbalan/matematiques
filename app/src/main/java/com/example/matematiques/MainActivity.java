@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String userMain;
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button buttonComençar = (Button) findViewById(R.id.buttonComençar);
-        Button btnRanking = (Button) findViewById(R.id.btnRanking);
+        TextView buttonComençar =  findViewById(R.id.buttonComençar);
+        TextView btnRanking =  findViewById(R.id.btnRanking);
 
 
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtras(b);
                 startActivity(intent);
 
+
             }
         });
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), ranking.class);
                 startActivityForResult(intent, 0);
+
             }
         });
 

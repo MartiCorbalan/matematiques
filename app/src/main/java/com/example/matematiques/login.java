@@ -44,7 +44,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
 
                 login();
-                //crear toast per donar benvinguda a l'usuari
+
             }
         });
 
@@ -68,12 +68,12 @@ public class login extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
 
 
-
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
                                     Intent intent = new Intent (login.this, MainActivity.class);
                                     startActivityForResult(intent, 0);
+                                    finish();
                                 }
                             }, 3000);
 

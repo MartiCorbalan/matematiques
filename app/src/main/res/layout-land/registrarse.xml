@@ -1,39 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:background="@mipmap/fotomates3"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    tools:context=".paginaInicial"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#00189186"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="212dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="96dp" />
+            android:layout_height="27dp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="146dp"
-            android:layout_height="81dp"
+            android:layout_width="125dp"
+            android:layout_height="61dp"
             android:layout_gravity="center"
-            android:hapticFeedbackEnabled="false"
             app:srcCompat="@drawable/prova2" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="13dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Username"
+
+                android:selectAllOnFocus="true"
+                android:textColor="#E2EAE5"
+                android:textColorHint="#FFFFFF" />
+
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="10dp"
             android:layout_weight="0" />
 
         <LinearLayout
@@ -44,18 +64,18 @@
             <EditText
                 android:id="@+id/email"
                 android:layout_width="168dp"
-                android:layout_height="69dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:selectAllOnFocus="true"
-                android:textStyle="bold" />
+                android:textColorHint="#FAF8F8" />
 
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="10dp"
             android:layout_weight="0" />
 
         <LinearLayout
@@ -73,18 +93,37 @@
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
-                android:textStyle="bold" />
+                android:shadowColor="#FFFFFF"
+                android:textColorHint="#FAF6F6" />
 
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="35dp" />
-
+            android:layout_height="14dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jaregistrat"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#00FFFFFF"
+                android:text="Ja estic registrat" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="11dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="125dp">
@@ -94,7 +133,10 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="login" />
+
+                android:layout_marginStart="170dp"
+                android:layout_marginLeft="170dp"
+                android:text="registrar-se" />
         </LinearLayout>
 
 

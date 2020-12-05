@@ -31,7 +31,7 @@ public class Nivell1 extends AppCompatActivity {
     private String id = "";
 
     Button corretgir;
-    ImageView flecha;
+
     TextView NumeroSuma;
     TextView Numero2Suma;
 
@@ -74,6 +74,7 @@ public class Nivell1 extends AppCompatActivity {
     LottieAnimationView Incorrecto1;
     LottieAnimationView Correcto2;
     LottieAnimationView Incorrecto2;
+    LottieAnimationView avio;
 
     int puntuacio;
     TextView puntuaciooooo;
@@ -93,7 +94,6 @@ public class Nivell1 extends AppCompatActivity {
         buscarpuntuacio();
 
 
-        flecha = findViewById(R.id.flecha);
         puntuaciooooo=findViewById(R.id.puntuacioooo);
 
         NumeroSuma = (TextView)findViewById(R.id.numeroSuma);
@@ -119,6 +119,7 @@ public class Nivell1 extends AppCompatActivity {
         Correcto2=(LottieAnimationView)findViewById(R.id.correcto2);
         Incorrecto2=(LottieAnimationView)findViewById(R.id.incorrecto2);
 
+        avio=(LottieAnimationView)findViewById(R.id.carga);
 
         Correcto.pauseAnimation();
         Incorrecto.pauseAnimation();
@@ -134,22 +135,31 @@ public class Nivell1 extends AppCompatActivity {
         Incorrecto2.setVisibility(View.GONE);
 
 
+        avio.setVisibility(View.VISIBLE);
+        corretgir.setVisibility(View.GONE);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
                 mostrarinfo();
+
+                avio.setVisibility(View.GONE);
+
+                corretgir.setVisibility(View.VISIBLE);
+
                 corretgir.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         corretgir();
                     }
                 });
-
-
-        flecha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), Nivell2.class);
-                startActivityForResult(intent, 0);
             }
-        });
+        }, 2000);
+
+
+
+
     }
 
 
@@ -162,8 +172,8 @@ public class Nivell1 extends AppCompatActivity {
         int resta = NumeroRestaGlobal - NumeroResta2Global;
 
         String resultat = String.valueOf(suma);
-        String resultat2 = String.valueOf(sumaiResta);
-        String resultat3 = String.valueOf(resta);
+        String resultat2 = String.valueOf(resta);
+        String resultat3 = String.valueOf(sumaiResta);
 
 
         if (resultat.equals(PosarSuma.getText().toString())) {
@@ -175,7 +185,7 @@ public class Nivell1 extends AppCompatActivity {
             Incorrecto.playAnimation();
         }
 
-        if (resultat2.equals(PosarSumairesta.getText().toString())) {
+        if (resultat2.equals(PosarResta.getText().toString())) {
             Correcto1.setVisibility(View.VISIBLE);
             Correcto1.playAnimation();
             puntuacio++;
@@ -184,7 +194,7 @@ public class Nivell1 extends AppCompatActivity {
             Incorrecto1.playAnimation();
         }
 
-        if (resultat3.equals(PosarResta.getText().toString())) {
+        if (resultat3.equals(PosarSumairesta.getText().toString())) {
             Correcto2.setVisibility(View.VISIBLE);
             Correcto2.playAnimation();
             puntuacio++;
@@ -193,13 +203,12 @@ public class Nivell1 extends AppCompatActivity {
             Incorrecto2.playAnimation();
         }
 
+
+
         puntuacioTotal += puntuacio;
 
-        //corretgir.setVisibility(View.GONE);
-        //puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio);
 
 
-        System.out.println(" id " + id);
 
                     contadoNivells++;
                     corretgir.setVisibility(View.GONE);
@@ -211,13 +220,8 @@ public class Nivell1 extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
-
-
                             desmarcar();
                             mostrarinfo();
-
-
 
                         }
                     }, 4000);
@@ -354,7 +358,6 @@ public class Nivell1 extends AppCompatActivity {
                             }
                         }
                     });
-
         }
 
         public void actualitzarpuntuacio(){
@@ -365,8 +368,7 @@ public class Nivell1 extends AppCompatActivity {
 
         }
 
-
-        }
+    }
 
 
 

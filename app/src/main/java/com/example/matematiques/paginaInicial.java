@@ -23,8 +23,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,7 +44,7 @@ public class paginaInicial<EmailPasswordActivity> extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.prova);
+        setContentView(R.layout.registrarse);
         mAuth = FirebaseAuth.getInstance();
 
         btnlogin = (Button) findViewById(R.id.botonlogin);

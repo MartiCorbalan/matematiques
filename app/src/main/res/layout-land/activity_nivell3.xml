@@ -36,49 +36,53 @@
 
     <TextView
         android:id="@+id/enunciat2"
-        android:layout_width="286dp"
-        android:layout_height="113dp"
+        android:layout_width="278dp"
+        android:layout_height="82dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/guideline72"
-        app:layout_constraintEnd_toStartOf="@+id/guideline64"
-        app:layout_constraintStart_toStartOf="@+id/guideline78"
+        app:layout_constraintEnd_toStartOf="@+id/guideline69"
+        app:layout_constraintStart_toStartOf="@+id/guideline62"
         app:layout_constraintTop_toTopOf="@+id/guideline70"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/resposta1"
-        android:layout_width="214dp"
-        android:layout_height="45dp"
+        android:layout_width="244dp"
+        android:layout_height="42dp"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline68"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
-        app:layout_constraintStart_toStartOf="@+id/guideline78"
+        app:layout_constraintStart_toStartOf="@+id/guideline62"
         app:layout_constraintTop_toTopOf="@+id/guideline67"
         app:layout_constraintVertical_bias="0.466"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/resposta2"
-        android:layout_width="214dp"
-        android:layout_height="45dp"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline73"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
-        app:layout_constraintStart_toStartOf="@+id/guideline78"
+        app:layout_constraintStart_toStartOf="@+id/guideline62"
         app:layout_constraintTop_toTopOf="@+id/guideline72"
         tools:ignore="MissingConstraints" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="730dp"
+        android:layout_height="414dp"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/avion" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/correcto"
         android:layout_width="0dp"
@@ -184,26 +188,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3652531" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.63" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_percent="0.72" />
 
     <Button
         android:id="@+id/btncorretgir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="118dp"
+        android:layout_height="35dp"
         android:text="Corretgir"
         app:layout_constraintBottom_toTopOf="@+id/guideline75"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
@@ -215,14 +219,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.88" />
+        app:layout_constraintGuide_percent="0.94" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline76"

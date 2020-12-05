@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#868D8E"
-    tools:context=".Nivell1">
+    tools:context=".Nivell2">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:text="Nivell1"
+        android:text="Nivell2"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/PosarSuma"
+        android:id="@+id/PosarMulti"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:inputType="number"
@@ -35,7 +35,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/PosarRestaiSuma"
+        android:id="@+id/PosarMultiiDiv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:inputType="number"
@@ -48,7 +48,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/PosarResta"
+        android:id="@+id/PosarDiv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:inputType="number"
@@ -84,11 +84,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.06839945" />
+        app:layout_constraintGuide_percent="0.11" />
 
 
     <TextView
-        android:id="@+id/numeroSuma"
+        android:id="@+id/numeroMulti"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -101,7 +101,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/numeroSuma2"
+        android:id="@+id/numeroMulti2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -119,21 +119,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.28" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline20"
@@ -154,13 +154,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.08" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:text="+"
+        android:text="*"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline20"
@@ -168,7 +168,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <TextView
-        android:id="@+id/numSum_Rest2"
+        android:id="@+id/NumeroMultiiDiv2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -184,17 +184,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.44" />
+        app:layout_constraintGuide_percent="0.51" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <TextView
-        android:id="@+id/numSum_Rest3"
+        android:id="@+id/NumeroMultiiDiv3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -209,7 +209,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:text="-"
+        android:text="/"
         android:textSize="30dp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
@@ -224,7 +224,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline29"
@@ -238,14 +238,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.57" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.62" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -255,7 +255,7 @@
         app:layout_constraintGuide_percent="0.71" />
 
     <TextView
-        android:id="@+id/numResta"
+        android:id="@+id/numDiv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -267,7 +267,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <TextView
-        android:id="@+id/numResta2"
+        android:id="@+id/numDiv2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -284,20 +284,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.81" />
+        app:layout_constraintGuide_percent="0.79" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.83" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:text="-"
+        android:text="/"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
@@ -309,7 +309,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <Button
         android:id="@+id/corretgir"
@@ -321,27 +321,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80574554" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8878249" />
+        app:layout_constraintGuide_percent="0.94" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Sumes i restes de 1 i 2 xifres"
+        android:text="Multiplicacions i divisions de 1 i 2 xifres"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintEnd_toStartOf="@+id/guideline31"
@@ -349,7 +349,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <TextView
-        android:id="@+id/numSum_Rest"
+        android:id="@+id/NumeroMultiiDiv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text=""
@@ -363,7 +363,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:text="+"
+        android:text="*"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toStartOf="@+id/guideline29"
@@ -375,18 +375,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
-
+        app:layout_constraintGuide_percent="0.21" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="730dp"
+        android:layout_height="411dp"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/avion" />
@@ -403,6 +404,8 @@
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/correcto"
         tools:ignore="MissingClass,MissingConstraints" />
+
+
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/incorrecto"
@@ -421,7 +424,7 @@
         android:id="@+id/correcto1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/numSum_Rest2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toTopOf="@+id/guideline38"
@@ -476,7 +479,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_percent="0.77" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93917274" />
 
     <TextView
         android:id="@+id/puntuacioooo"
@@ -485,8 +496,8 @@
         android:text=""
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
-        app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="@+id/guideline55" />
 
 

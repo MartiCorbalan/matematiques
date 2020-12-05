@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paginaInicial"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@mipmap/fotomates3"
+    xmlns:tools="http://schemas.android.com/tools">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#23C1B3"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="212dp">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="40dp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="146dp"
-            android:layout_height="81dp"
+            android:layout_width="133dp"
+            android:layout_height="64dp"
             android:layout_gravity="center"
-            android:background="#02000000"
             android:hapticFeedbackEnabled="false"
             app:srcCompat="@drawable/prova2" />
 
@@ -32,25 +30,10 @@
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="168dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Username"
-                android:selectAllOnFocus="true" />
-
-        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp"
+            android:layout_height="17dp"
             android:layout_weight="0" />
 
         <LinearLayout
@@ -61,11 +44,12 @@
             <EditText
                 android:id="@+id/email"
                 android:layout_width="168dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:selectAllOnFocus="true" />
+                android:selectAllOnFocus="true"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -88,7 +72,8 @@
                 android:imeActionLabel="Sign in"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
-                android:selectAllOnFocus="true" />
+                android:selectAllOnFocus="true"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -96,24 +81,6 @@
             android:layout_width="match_parent"
             android:layout_height="35dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/jaregistrat"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:background="#00FFFFFF"
-                android:text="Ja estic registrat" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,8 +94,9 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-
-                android:text="registrar-se" />
+                android:layout_marginStart="180dp"
+                android:layout_marginLeft="180dp"
+                android:text="login" />
         </LinearLayout>
 
 

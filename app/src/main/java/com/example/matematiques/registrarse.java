@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,8 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +44,9 @@ public class registrarse<EmailPasswordActivity> extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrarse);
+        //supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        setContentView(R.layout.registrarse);
         mAuth = FirebaseAuth.getInstance();
 
         Button btnlogin = (Button) findViewById(R.id.botonlogin);
@@ -97,10 +98,6 @@ public class registrarse<EmailPasswordActivity> extends AppCompatActivity {
 
 
 
-
-
-
-
         mAuth.createUserWithEmailAndPassword(gmail, pwd)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -140,7 +137,7 @@ public class registrarse<EmailPasswordActivity> extends AppCompatActivity {
         b.putString ("usuaris",nom);
         intent.putExtras(b);
         startActivity(intent);
-
+        finish();
     }
 
 }
