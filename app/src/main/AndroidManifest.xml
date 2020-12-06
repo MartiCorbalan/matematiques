@@ -22,7 +22,6 @@
         <activity android:name=".Nivell2" />
         <activity android:name=".nivells" />
         <activity android:name=".ranking" />
-        <activity android:name=".registrarse" />
         <activity android:name=".Nivell1" />
         <activity
             android:name=".MainActivity"

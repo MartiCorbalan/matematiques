@@ -71,7 +71,7 @@
                 android:text="" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/pt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -98,26 +98,28 @@
                 android:layout_width="5dp" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/j2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="Jordi" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/pt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="20" />
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="15dp"
-            android:layout_weight="0" />
+            android:layout_weight="0"
+
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,20 +135,20 @@
                 android:layout_width="5dp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/j3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="Hypno" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/pt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="15" />
         </LinearLayout>
 
         <Space
@@ -168,20 +170,20 @@
                 android:layout_width="5dp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/j4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="David" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/pt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="4" />
         </LinearLayout>
 
         <Space
@@ -203,20 +205,20 @@
                 android:layout_width="5dp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/j5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="Firulais" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/pt5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="" />
+                android:text="2" />
         </LinearLayout>
 
         <Space

@@ -180,6 +180,7 @@ public class Nivell1 extends AppCompatActivity {
             Correcto.setVisibility(View.VISIBLE);
             Correcto.playAnimation();
             puntuacio++;
+            actualitzarpuntuacio();
         } else {
             Incorrecto.setVisibility(View.VISIBLE);
             Incorrecto.playAnimation();
@@ -189,6 +190,7 @@ public class Nivell1 extends AppCompatActivity {
             Correcto1.setVisibility(View.VISIBLE);
             Correcto1.playAnimation();
             puntuacio++;
+            actualitzarpuntuacio();
         } else {
             Incorrecto1.setVisibility(View.VISIBLE);
             Incorrecto1.playAnimation();
@@ -198,6 +200,7 @@ public class Nivell1 extends AppCompatActivity {
             Correcto2.setVisibility(View.VISIBLE);
             Correcto2.playAnimation();
             puntuacio++;
+            actualitzarpuntuacio();
         } else {
             Incorrecto2.setVisibility(View.VISIBLE);
             Incorrecto2.playAnimation();
@@ -230,6 +233,7 @@ public class Nivell1 extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
+
 
                     Intent intent = new Intent (Nivell1.this, Nivell2.class);
 

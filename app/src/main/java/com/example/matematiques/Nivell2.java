@@ -174,6 +174,7 @@ public class Nivell2 extends AppCompatActivity {
             Correcto.setVisibility(View.VISIBLE);
             Correcto.playAnimation();
             puntuacio++;
+            actualitzarpuntuacio();
         } else {
             Incorrecto.setVisibility(View.VISIBLE);
             Incorrecto.playAnimation();
@@ -181,6 +182,7 @@ public class Nivell2 extends AppCompatActivity {
         if (resultat2.equals(PosarDiv.getText().toString())) {
             Correcto1.setVisibility(View.VISIBLE);
             Correcto1.playAnimation();
+            actualitzarpuntuacio();
             puntuacio++;
         } else {
             Incorrecto1.setVisibility(View.VISIBLE);
@@ -190,6 +192,7 @@ public class Nivell2 extends AppCompatActivity {
             Correcto2.setVisibility(View.VISIBLE);
             Correcto2.playAnimation();
             puntuacio++;
+            actualitzarpuntuacio();
         } else {
             Incorrecto2.setVisibility(View.VISIBLE);
             Incorrecto2.playAnimation();
@@ -201,7 +204,7 @@ public class Nivell2 extends AppCompatActivity {
         corretgir.setVisibility(View.GONE);
         puntuaciooooo.setVisibility(View.VISIBLE);
 
-        puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: " + puntuacioTotal);
+        puntuaciooooo.setText("Has conseguit aquests punts: " + puntuacio + " la teva puntuacio total es de: " + (dbpuntuacioTotal + puntuacio));
         actualitzarpuntuacio();
 
 
@@ -211,7 +214,6 @@ public class Nivell2 extends AppCompatActivity {
 
                 desmarcar();
                 mostrarinfo();
-
 
             }
         }, 4000);
@@ -376,7 +378,7 @@ public class Nivell2 extends AppCompatActivity {
 
         if (puntuacioTotal >= dbpuntuacioTotal) {
 
-            db.collection("usuaris").document(id).update("puntuacio", puntuacioTotal);
+            db.collection("usuaris").document(id).update("puntuacio", dbpuntuacioTotal+puntuacioTotal);
 
         }
 
