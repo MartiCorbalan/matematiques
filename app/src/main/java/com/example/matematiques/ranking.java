@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,8 +19,6 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Objects;
 
 public class ranking extends AppCompatActivity {
@@ -45,7 +42,7 @@ public class ranking extends AppCompatActivity {
     TextView puntuacioo5;
 
 
-    ArrayList<String> jugador = new ArrayList<>();
+    ArrayList<String> jugador = new ArrayList<String>();
 
 
     ArrayList<Integer> puntuacioRanking = new ArrayList<Integer>();
@@ -70,12 +67,26 @@ public class ranking extends AppCompatActivity {
         puntuacioo5 = findViewById(R.id.pt5);
 
 
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-              jugador1.setText(usuari);
-              puntuacioo1.setText(puntuacio);
+              jugador1.setText(jugador.get(0));
+              puntuacioo1.setText(puntuacioRanking.get(0));
+
+              jugador2.setText(jugador.get(1));
+              puntuacioo2.setText(puntuacioRanking.get(1));
+
+              jugador3.setText(jugador.get(2));
+              puntuacioo3.setText(puntuacioRanking.get(2));
+
+              jugador4.setText(jugador.get(3));
+              puntuacioo4.setText(puntuacioRanking.get(3));
+
+              jugador5.setText(jugador.get(4));
+              puntuacioo5.setText(puntuacioRanking.get(4));
+
             }
         }, 1000);
 
@@ -88,8 +99,25 @@ public class ranking extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
                         Log.d("TAG", document.getId() + " => " + document.getData());
-                        usuari = document.getData().get("usuari").toString();
-                        puntuacio = document.getData().get("puntuacio").toString();
+                        jugador.add(document.getData().get("usuari").toString());
+                        puntuacioRanking.add(Integer.parseInt(document.getData().get("puntuacio").toString()));
+                    }
+                } else {
+                    Log.d("TAG", "Error getting documents: ", task.getException());
+                }
+            }
+        });
+
+
+        db.collection("usuaris").whereNotEqualTo("email", email).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                        Log.d("TAG", document.getId() + " => " + document.getData());
+                        jugador.add(document.getData().get("usuari").toString());
+                        puntuacioRanking.add(Integer.parseInt(document.getData().get("puntuacio").toString()));
                     }
                 } else {
                     Log.d("TAG", "Error getting documents: ", task.getException());

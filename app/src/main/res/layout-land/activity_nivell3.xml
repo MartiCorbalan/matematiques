@@ -36,8 +36,8 @@
 
     <TextView
         android:id="@+id/enunciat2"
-        android:layout_width="278dp"
-        android:layout_height="82dp"
+        android:layout_width="276dp"
+        android:layout_height="98dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/guideline72"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
@@ -59,8 +59,8 @@
 
     <EditText
         android:id="@+id/resposta2"
-        android:layout_width="249dp"
-        android:layout_height="43dp"
+        android:layout_width="242dp"
+        android:layout_height="32dp"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline73"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
@@ -70,8 +70,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="730dp"
-        android:layout_height="414dp"
+        android:layout_width="729dp"
+        android:layout_height="416dp"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -188,26 +188,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.39" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63" />
+        app:layout_constraintGuide_percent="0.64" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <Button
         android:id="@+id/btncorretgir"
-        android:layout_width="118dp"
-        android:layout_height="35dp"
+        android:layout_width="126dp"
+        android:layout_height="37dp"
         android:text="Corretgir"
         app:layout_constraintBottom_toTopOf="@+id/guideline75"
         app:layout_constraintEnd_toStartOf="@+id/guideline69"
