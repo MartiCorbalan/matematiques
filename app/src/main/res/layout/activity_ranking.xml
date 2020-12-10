@@ -103,7 +103,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Jordi" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/pt2"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="20" />
+                android:text="" />
         </LinearLayout>
 
         <Space
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Hypno" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/pt3"
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="15" />
+                android:text="" />
         </LinearLayout>
 
         <Space
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="David" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/pt4"
@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="4" />
+                android:text="" />
         </LinearLayout>
 
         <Space
@@ -210,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Firulais" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/pt5"
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="2" />
+                android:text="" />
         </LinearLayout>
 
         <Space
