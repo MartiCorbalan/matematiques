@@ -251,6 +251,10 @@ public class Nivell1 extends AppCompatActivity {
 
             public void mostrarinfo(){
 
+                if (puntuacio<=dbpuntuacioTotal){
+                    puntuacio=dbpuntuacioTotal;
+                }
+
                 NumeroSumaGlobal = (int) (Math.random()*100) + 1;
                 Suma1 = String.valueOf(NumeroSumaGlobal);
                 NumeroSuma.setText(Suma1);

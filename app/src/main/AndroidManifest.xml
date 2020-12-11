@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".carga"></activity>
-        <activity android:name=".paginaInicial">
+        <activity
+            android:name=".paginaInicial"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +27,9 @@
         <activity android:name=".Nivell1" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/SplashTheme"></activity>
+            >
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
