@@ -9,6 +9,83 @@
 
 
     <TextView
+        android:id="@+id/texto3"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        android:text="Aquí introdueix la teva resposata"
+
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
+
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_width="146dp"
+        android:layout_height="34dp"
+        android:text="És mostren els dos números a restar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline27"
+        app:layout_constraintEnd_toStartOf="@+id/guideline36"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+    <ImageView
+        android:id="@+id/flecha5"
+        android:layout_width="55dp"
+        android:layout_height="59dp"
+
+        android:rotation="155"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline55"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/flecha3"
+        android:layout_width="32dp"
+        android:layout_height="18dp"
+
+        android:rotation="280"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline30"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
+        app:layout_constraintTop_toTopOf="@+id/guideline27"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/flecha4"
+        android:layout_width="27dp"
+        android:layout_height="19dp"
+
+        android:rotation="280"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline36"
+        app:layout_constraintStart_toStartOf="@+id/guideline33"
+        app:layout_constraintTop_toTopOf="@+id/guideline27"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/flecha2"
+        android:layout_width="22dp"
+        android:layout_height="19dp"
+
+        android:rotation="280"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="@+id/guideline27"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -141,6 +218,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.31" />
+
+    <ImageView
+        android:id="@+id/flecha1"
+        android:layout_width="38dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginLeft="32dp"
+        android:rotation="280"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline27"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline21"
@@ -338,13 +431,13 @@
         app:layout_constraintGuide_percent="0.93" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/texto1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Sumes i restes de 1 i 2 xifres"
-        android:textSize="20dp"
+        android:text="És mostren els dos números a sumar"
+        android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
-        app:layout_constraintEnd_toStartOf="@+id/guideline31"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
@@ -380,15 +473,15 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="731dp"
-        android:layout_height="409dp"
+        android:layout_width="728dp"
+        android:layout_height="411dp"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.898"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/avion" />
@@ -482,8 +575,8 @@
 
     <TextView
         android:id="@+id/puntuacioooo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="493dp"
+        android:layout_height="25dp"
         android:text=""
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"

@@ -42,9 +42,21 @@ public class Nivell1 extends AppCompatActivity {
     TextView Numero2SumaiResta;
     TextView Numero3SumaiResta;
 
+    TextView text1;
+    TextView text2;
+    TextView text3;
+
+    ImageView f1;
+    ImageView f2;
+    ImageView f3;
+    ImageView f4;
+    ImageView f5;
+
     EditText PosarSuma;
     EditText PosarResta;
     EditText PosarSumairesta;
+
+
 
 
 
@@ -106,6 +118,16 @@ public class Nivell1 extends AppCompatActivity {
         Numero2SumaiResta = (TextView)findViewById(R.id.numSum_Rest2);
         Numero3SumaiResta = (TextView)findViewById(R.id.numSum_Rest3);
 
+        text1 = findViewById(R.id.texto1);
+        text2 = findViewById(R.id.texto2);
+        text3 = findViewById(R.id.texto3);
+
+        f1 = findViewById(R.id.flecha1);
+        f2 = findViewById(R.id.flecha2);
+        f3 = findViewById(R.id.flecha3);
+        f4 = findViewById(R.id.flecha4);
+        f5 = findViewById(R.id.flecha5);
+
         corretgir = (Button)findViewById(R.id.corretgir);
 
         PosarSuma = (EditText)findViewById(R.id.PosarSuma);
@@ -134,6 +156,14 @@ public class Nivell1 extends AppCompatActivity {
         Correcto2.setVisibility(View.GONE);
         Incorrecto2.setVisibility(View.GONE);
 
+        f1.setVisibility(View.GONE);
+        f2.setVisibility(View.GONE);
+        f3.setVisibility(View.GONE);
+        f4.setVisibility(View.GONE);
+        f5.setVisibility(View.GONE);
+        text1.setVisibility(View.GONE);
+        text2.setVisibility(View.GONE);
+        text3.setVisibility(View.GONE);
 
         avio.setVisibility(View.VISIBLE);
         corretgir.setVisibility(View.GONE);
@@ -144,14 +174,38 @@ public class Nivell1 extends AppCompatActivity {
 
                 mostrarinfo();
 
+                f1.setVisibility(View.VISIBLE);
+                f2.setVisibility(View.VISIBLE);
+                f3.setVisibility(View.VISIBLE);
+                f4.setVisibility(View.VISIBLE);
+                f5.setVisibility(View.VISIBLE);
+                text1.setVisibility(View.VISIBLE);
+                text2.setVisibility(View.VISIBLE);
+                text3.setVisibility(View.VISIBLE);
+
                 avio.setVisibility(View.GONE);
+
+
 
                 corretgir.setVisibility(View.VISIBLE);
 
                 corretgir.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+
+
                         corretgir();
+
+                        f1.setVisibility(View.INVISIBLE);
+                        f2.setVisibility(View.INVISIBLE);
+                        f3.setVisibility(View.INVISIBLE);
+                        f4.setVisibility(View.INVISIBLE);
+                        f5.setVisibility(View.GONE);
+                        text1.setVisibility(View.INVISIBLE);
+                        text2.setVisibility(View.INVISIBLE);
+                        text3.setVisibility(View.INVISIBLE);
+
                     }
                 });
             }

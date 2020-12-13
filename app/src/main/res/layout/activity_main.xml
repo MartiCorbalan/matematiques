@@ -41,7 +41,6 @@
         android:id="@+id/buttonComençar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         android:fontFamily="@font/chalkdust"
         android:gravity="center"
         android:text="Començar"
@@ -72,10 +71,10 @@
         android:textColor="#F4F4F4"
         android:textColorHint="#FAF9F9"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline54"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline53" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -125,14 +124,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.67" />
+        app:layout_constraintGuide_percent="0.63" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -147,6 +146,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <TextView
+        android:id="@+id/tutorial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/chalkdust"
+        android:gravity="center"
+        android:text="Tutorial"
+        android:textColor="#F4EFEF"
+        android:textColorHint="#F1EEEE"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline54"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline53" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".carga"></activity>
+        <activity android:name=".tutorial"></activity>
+        <activity android:name=".carga" />
         <activity
             android:name=".paginaInicial"
             android:theme="@style/SplashTheme">
@@ -25,11 +26,7 @@
         <activity android:name=".nivells" />
         <activity android:name=".ranking" />
         <activity android:name=".Nivell1" />
-        <activity
-            android:name=".MainActivity"
-            >
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
