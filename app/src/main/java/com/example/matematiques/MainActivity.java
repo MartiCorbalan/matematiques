@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView buttonComençar =  findViewById(R.id.buttonComençar);
         TextView btnRanking =  findViewById(R.id.btnRanking);
-        TextView tuto = findViewById(R.id.tutorial);
+
 
 
 
@@ -59,14 +59,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       tuto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), tutorial.class);
-                startActivityForResult(intent, 0);
 
-            }
-        });
 
 
 
