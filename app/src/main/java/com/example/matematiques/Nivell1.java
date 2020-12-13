@@ -309,12 +309,12 @@ public class Nivell1 extends AppCompatActivity {
                     puntuacio=dbpuntuacioTotal;
                 }
 
-                NumeroSumaGlobal = (int) (Math.random()*100) + 1;
+                NumeroSumaGlobal = (int) (Math.random()*99) + 1;
                 Suma1 = String.valueOf(NumeroSumaGlobal);
                 NumeroSuma.setText(Suma1);
 
 
-                NumeroSuma2Global = (int) (Math.random()*100) + 1;
+                NumeroSuma2Global = (int) (Math.random()*99) + 1;
                 Suma2 = String.valueOf(NumeroSuma2Global);
                 Numero2Suma.setText(Suma2);
 
@@ -342,17 +342,17 @@ public class Nivell1 extends AppCompatActivity {
 
                 }
 
-                NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
+                NumeroSumaiRestaGlobal = (int) (Math.random()*99) + 1;
                 SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
                 NumeroSumaiResta.setText(SumaiResta1);
 
 
-                NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
+                NumeroSumaiResta2Global = (int) (Math.random()*99) + 1;
                 SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
                 Numero2SumaiResta.setText(SumaiResta2);
 
 
-                NumeroSumaiResta3Global = (int) (Math.random()*100) + 1;
+                NumeroSumaiResta3Global = (int) (Math.random()*99) + 1;
                 SumaiResta3 = String.valueOf(NumeroSumaiResta3Global);
                 Numero3SumaiResta.setText(SumaiResta3);
 
@@ -362,11 +362,11 @@ public class Nivell1 extends AppCompatActivity {
                     int resultado =  NumeroSumaiRestaGlobal + NumeroSumaiResta2Global;
                     if (NumeroSumaiResta3Global > resultado){
 
-                        NumeroSumaiRestaGlobal = (int) (Math.random()*100) + 1;
+                        NumeroSumaiRestaGlobal = (int) (Math.random()*99) + 1;
                         SumaiResta1 = String.valueOf(NumeroSumaiRestaGlobal);
                         NumeroSumaiResta.setText(SumaiResta1);
 
-                        NumeroSumaiResta2Global = (int) (Math.random()*100) + 1;
+                        NumeroSumaiResta2Global = (int) (Math.random()*99) + 1;
                         SumaiResta2 = String.valueOf(NumeroSumaiResta2Global);
                         Numero2SumaiResta.setText(SumaiResta2);
                     }else{

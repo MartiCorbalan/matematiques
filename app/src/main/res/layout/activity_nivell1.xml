@@ -436,14 +436,15 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="409dp"
-        android:layout_height="734dp"
+        android:layout_width="111dp"
+        android:layout_height="69dp"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666"
+        app:layout_constraintVertical_bias="0.889"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/avion" />
@@ -550,8 +551,8 @@
 
     <TextView
         android:id="@+id/texto2"
-        android:layout_width="133dp"
-        android:layout_height="52dp"
+        android:layout_width="125dp"
+        android:layout_height="41dp"
         android:text="És mostren els dos números a restar"
         app:layout_constraintBottom_toTopOf="@+id/guideline27"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"

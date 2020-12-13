@@ -190,8 +190,8 @@ public class Nivell3 extends AppCompatActivity {
         int max= 20;
         int min=1;
 
-        numero1 = (int) (Math.random()*100) + 1;
-        numero2 = (int) (Math.random()*100) + 1;
+        numero1 = (int) (Math.random()*99) + 1;
+        numero2 = (int) (Math.random()*99) + 1;
 
         enunciat1.setText("Anna té una col·lecció de " + numero1 +  " cromos\n" +
                 "de motos i en Xavier té una col·lecció\n" +
@@ -199,7 +199,7 @@ public class Nivell3 extends AppCompatActivity {
                 "Quants cromos tenen en total?");
 
 
-        numero3 = (int) (Math.random()*100) + 1;
+        numero3 = (int) (Math.random()*99) + 1;
         numero4 = (int) (Math.random()*10) + 1;
         numero5 = (int) (Math.random()*max) + min;
 
