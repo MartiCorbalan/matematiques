@@ -436,8 +436,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/carga"
-        android:layout_width="111dp"
-        android:layout_height="69dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:background="#A8A4A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

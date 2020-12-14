@@ -173,7 +173,7 @@ public class Nivell2 extends AppCompatActivity {
         if (resultat.equals(PosarMulti.getText().toString())) {
             Correcto.setVisibility(View.VISIBLE);
             Correcto.playAnimation();
-            puntuacio++;
+            puntuacio=puntuacio+5;
             actualitzarpuntuacio();
         } else {
             Incorrecto.setVisibility(View.VISIBLE);
@@ -183,7 +183,7 @@ public class Nivell2 extends AppCompatActivity {
             Correcto1.setVisibility(View.VISIBLE);
             Correcto1.playAnimation();
             actualitzarpuntuacio();
-            puntuacio++;
+            puntuacio=puntuacio+5;
         } else {
             Incorrecto1.setVisibility(View.VISIBLE);
             Incorrecto1.playAnimation();
@@ -191,7 +191,7 @@ public class Nivell2 extends AppCompatActivity {
         if (resultat3.equals(PosarMultiiDiv.getText().toString())) {
             Correcto2.setVisibility(View.VISIBLE);
             Correcto2.playAnimation();
-            puntuacio++;
+            puntuacio=puntuacio+5;
             actualitzarpuntuacio();
         } else {
             Incorrecto2.setVisibility(View.VISIBLE);
